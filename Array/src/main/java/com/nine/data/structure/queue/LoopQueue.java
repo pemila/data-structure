@@ -1,9 +1,7 @@
 package com.nine.data.structure.queue;
 
-import com.nine.data.structure.array.Array;
-
 /**
- * @desc 循环数组
+ * @desc 循环队列
  * @author 月在未央
  * @date 2019/8/4 17:09
  **/
@@ -95,5 +93,17 @@ public class LoopQueue<E> implements Queue<E> {
         }
         res.append("] tail");
         return res.toString();
+    }
+
+    public static void main(String[] args) {
+        LoopQueue<Integer> queue = new LoopQueue<>();
+        for(int i=0;i<10;i++){
+            queue.enqueue(i);
+            System.out.println(queue);
+            if(i%3==2){
+                queue.dequeue();
+                System.out.println(queue);
+            }
+        }
     }
 }
