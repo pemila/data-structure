@@ -86,6 +86,15 @@ public class Array<E> {
         return data[index];
     }
 
+    // 获取最后一个元素
+    public E getLast(){
+        return get(size-1);
+    }
+    // 获取第一个元素
+    public E getFirst(){
+        return get(0);
+    }
+
     //更新index位置的元素為e
     public void set(int index, E e) {
         if (index < 0 || index > size) {
